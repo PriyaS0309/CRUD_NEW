@@ -121,10 +121,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Migrations\202208180940212_priya.cs" />
-    <Compile Include="Migrations\202208180940212_priya.Designer.cs">
-      <DependentUpon>202208180940212_priya.cs</DependentUpon>
+    <Compile Include="Migrations\202208190705319_priya.cs" />
+    <Compile Include="Migrations\202208190705319_priya.Designer.cs">
+      <DependentUpon>202208190705319_priya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208240906027_addedUser.cs" />
+    <Compile Include="Migrations\202208240906027_addedUser.Designer.cs">
+      <DependentUpon>202208240906027_addedUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -135,6 +140,7 @@
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +178,7 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,8 +190,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202208180940212_priya.resx">
-      <DependentUpon>202208180940212_priya.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202208190705319_priya.resx">
+      <DependentUpon>202208190705319_priya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208240906027_addedUser.resx">
+      <DependentUpon>202208240906027_addedUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

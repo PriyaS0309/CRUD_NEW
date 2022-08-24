@@ -13,7 +13,7 @@ namespace CRUD_NEW.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202208180940212_priya"; }
+            get { return "202208190705319_priya"; }
         }
         
         string IMigrationMetadata.Source

@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace CRUD_NEW.Controllers
 {
+    
     public class ProductController : Controller
     {
         AppDbContext db = new AppDbContext();
@@ -20,6 +22,7 @@ namespace CRUD_NEW.Controllers
             return View(data);
         }
 
+        
         public ActionResult Create()
         {
             ViewBag.Categories = db.Categories.ToList(); 
@@ -67,7 +70,6 @@ namespace CRUD_NEW.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
 
 
     }

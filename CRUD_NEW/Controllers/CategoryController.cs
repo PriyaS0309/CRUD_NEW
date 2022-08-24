@@ -4,22 +4,25 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 
 namespace CRUD_NEW.Controllers
 {
+   
     public class CategoryController : Controller
     {
         AppDbContext db = new AppDbContext();
         // GET: Category
         public ActionResult Index()
         {
-            var data = db.Categories.ToList();
-            return View(data);
+            var categories = db.Categories.ToList();
+            return View(categories);
         }
 
+      
         public ActionResult Create()
         {
             return View();
@@ -36,8 +39,14 @@ namespace CRUD_NEW.Controllers
 
         public ActionResult Edit(int id)
         {
-            var row = db.Categories.Where(model => model.ID == id).FirstOrDefault();
-            return View(row);
+            var category = db.Categories.Where(model => model.ID == id).FirstOrDefault();
+            if (category == null)
+            {
+                return HttpNotFound();
+                //return Content("No Category Found");
+            }
+
+            return View(category);
         }
 
         [HttpPost]
@@ -50,21 +59,17 @@ namespace CRUD_NEW.Controllers
 
         public ActionResult Delete(int id)
         {
-            var db_row = db.Categories.Where(model => model.ID == id).FirstOrDefault();
-            return View(db_row);
+            var category = db.Categories.Where(model => model.ID == id).FirstOrDefault();
+            return View(category);
         }
 
         [HttpPost]
         public ActionResult Delete(Category c)
         {
             db.Entry(c).State = EntityState.Deleted;
+            
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-
-
-
-
     }
 }

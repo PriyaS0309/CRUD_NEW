@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace CRUD_NEW.Models
 {
-    public class Category
+    public class User
     {
         [Key]
-       
-        [DisplayName("Category ID")]
         public int ID { get; set; }
-
-        [DisplayName("Category Name")]
-        public string Name { get; set; }
-       
-       
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

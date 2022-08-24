@@ -13,6 +13,7 @@ namespace CRUD_NEW
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            GlobalFilters.Filters.Add(new AuthorizeAttribute()); //to authorize globally whole application
         }
     }
 }

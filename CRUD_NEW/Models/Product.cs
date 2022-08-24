@@ -10,6 +10,7 @@ namespace CRUD_NEW.Models
 {
     public class Product
     {
+
         [Key]
 
         [DisplayName("Product ID")]
@@ -23,5 +24,6 @@ namespace CRUD_NEW.Models
         [ForeignKey("Category_ID")]
 
         public virtual Category Category { get; set; }
+       
     }
 }
