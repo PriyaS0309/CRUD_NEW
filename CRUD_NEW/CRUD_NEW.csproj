@@ -131,6 +131,10 @@
     <Compile Include="Migrations\202208240906027_addedUser.Designer.cs">
       <DependentUpon>202208240906027_addedUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208300858073_addedIsActiveToProduct.cs" />
+    <Compile Include="Migrations\202208300858073_addedIsActiveToProduct.Designer.cs">
+      <DependentUpon>202208300858073_addedIsActiveToProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -195,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208240906027_addedUser.resx">
       <DependentUpon>202208240906027_addedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208300858073_addedIsActiveToProduct.resx">
+      <DependentUpon>202208300858073_addedIsActiveToProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,6 +16,8 @@ namespace CRUD_NEW.Models
 
         [DisplayName("Category Name")]
         public string Name { get; set; }
+
+        public bool IsActive { get; set; }
        
        
     }

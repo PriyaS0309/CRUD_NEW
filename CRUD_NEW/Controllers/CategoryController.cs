@@ -71,5 +71,17 @@ namespace CRUD_NEW.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult CategoryIsActivate(int id)
+        {
+            var category = db.Categories.FirstOrDefault(model => model.ID == id);
+            var products = db.Products.Where(model => model.Category_ID == category.ID).ToList();
+            foreach (var product in products)
+            {
+                product.IsActive = false;
+            }
+            return View();
+        }
     }
 }

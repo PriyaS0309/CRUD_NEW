@@ -19,6 +19,8 @@ namespace CRUD_NEW.Models
         [DisplayName("Product Name")]
         public string Name { get; set; }
 
+        public bool IsActive { get; set; }
+
    
         public virtual int Category_ID { get; set; }
         [ForeignKey("Category_ID")]
